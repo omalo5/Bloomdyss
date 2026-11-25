@@ -1,0 +1,43 @@
+ :root{--purple:#32106b;--purple2:#4d1c8c;--violet:#6d38a3;--pink:#efb8d8;--pink2:#f7d8e9;--cream:#fff8ee;--paper:#fbf7f4;--ink:#261c30;--muted:#786e80;--line:#e8dce9;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.7}img{display:block;max-width:100%;object-fit:cover}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.topbar{height:31px;background:#210746;color:#f7d9eb;display:flex;align-items:center;justify-content:center;gap:20px;font-size:11px;font-weight:700;letter-spacing:.16em}.topbar span{font-weight:400;letter-spacing:.04em;color:#d9c6e7}.header{height:86px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;gap:25px;background:#fffaf6;position:sticky;top:0;z-index:50;border-bottom:1px solid #eadfeb;box-shadow:0 5px 25px #32106b08}.brand{display:block;width:180px;height:76px;overflow:hidden;flex-shrink:0}.brand img{width:100%;height:100%;object-fit:contain}.nav{display:flex;align-items:center;gap:clamp(14px,2.2vw,31px)}.nav>a{font-size:13px;color:#5c4b67;transition:.2s;white-space:nowrap}.nav>a:hover,.nav>a.active{color:var(--purple)}.nav>a.active:not(.nav-order):after{content:"";display:block;height:2px;background:var(--pink);margin-top:3px}.nav .nav-order{background:var(--purple);color:white;padding:13px 17px;box-shadow:4px 4px 0 var(--pink);transition:.2s}.nav-order span{margin-left:9px}.nav .nav-order:hover{background:var(--violet);transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}.nav-toggle{display:none;border:0;background:var(--purple);color:white;padding:10px 13px;font-size:19px}.button{display:inline-flex;align-items:center;justify-content:center;gap:19px;padding:14px 20px;font-size:13px;font-weight:700;transition:transform .2s,background .2s;cursor:pointer;border:1px solid transparent}.button b{font-size:16px}.button:hover{transform:translateY(-3px)}.button-pink{background:var(--pink);color:var(--purple)}.button-pink:hover{background:#f8cce3}.button-purple{background:var(--purple);color:white;box-shadow:5px 5px 0 var(--pink)}.button-purple:hover{background:var(--violet)}.button-light{background:#fff8ee;color:var(--purple)}.button-light:hover{background:var(--pink2)}.eyebrow{display:flex;align-items:center;gap:10px;color:#f4cbe3;font-size:11px;font-weight:700;letter-spacing:.18em}.eyebrow>span{width:25px;height:1px;background:var(--pink)}.eyebrow.dark{color:#88539b}.eyebrow.dark>span{background:#a46cae}.section{padding:90px 8%}.footer{background:#210746;color:white;padding:44px 8% 20px}.footer-main{display:grid;grid-template-columns:1.2fr 1fr .7fr .7fr;gap:30px;align-items:start}.footer-logo{width:145px;height:95px;display:block;background:#32106b;overflow:hidden}.footer-logo img{width:100%;height:100%;object-fit:contain}.footer-main>p{font-size:14px;line-height:1.9;color:#cfc1dc;margin-top:14px}.footer-links{display:flex;flex-direction:column;gap:10px;font-size:13px;color:#d7c9e2}.footer-links b{font-size:11px;letter-spacing:.16em;color:var(--pink);margin-bottom:6px}.footer-links a:hover{color:var(--pink)}.footer-bottom{display:flex;justify-content:space-between;border-top:1px solid #ffffff24;margin-top:35px;padding-top:17px;color:#bcaaca;font-size:11px}.footer-bottom a{color:#f0cbe2}.page-hero{position:relative;background:var(--purple);color:white;padding:74px 10% 82px;overflow:hidden}.page-hero h1{font:500 clamp(43px,6vw,70px)/1.1 var(--serif);letter-spacing:-1.5px;margin:20px 0}.page-hero h1 em{color:var(--pink);font-weight:500}.page-hero>p{max-width:550px;color:#ded2e8;font-size:13px;line-height:1.9}.center{text-align:center;margin-top:40px}.catalog-bottom-cta{position:relative;text-align:center;background:var(--purple);color:white;padding:65px 20px 72px;overflow:hidden}.catalog-bottom-cta h2{font:500 clamp(32px,4vw,46px)/1.2 var(--serif);margin:0 0 8px}.catalog-bottom-cta p{font-size:14px;color:#d9cce6;margin:0 auto 25px}.catalog-bottom-cta:before,.catalog-bottom-cta:after{content:"✿";position:absolute;color:#ffffff0b;font-size:180px;top:0}.catalog-bottom-cta:before{left:5%}.catalog-bottom-cta:after{right:5%}
+@media(max-width:1000px){.header{padding:0 4%}.brand{width:150px;height:68px}.nav{gap:14px}.nav>a{font-size:12px}.section{padding-left:6%;padding-right:6%}.footer{padding-left:6%;padding-right:6%}}
+@media(max-width:760px){.topbar{font-size:11px;gap:8px;letter-spacing:.08em}.topbar span{font-size:11px}.header{height:73px;padding:0 5%}.brand{width:145px;height:62px}.nav-toggle{display:block;margin-left:auto}.nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fffaf6;padding:20px 6% 25px;box-shadow:0 15px 25px #21074618;flex-direction:column;align-items:stretch;gap:17px}.nav.open{display:flex}.nav>a{font-size:13px}.nav .nav-order{text-align:center}.section{padding:65px 6%}.page-hero{padding:60px 7% 65px}.footer{padding:35px 6% 18px}.footer-main{grid-template-columns:1fr 1fr;gap:25px}.footer-logo{width:130px;height:85px}.footer-bottom{gap:12px}.catalog-bottom-cta:before{left:-40px}.catalog-bottom-cta:after{right:-40px}}
+@media(max-width:420px){.topbar span{display:none}.footer-main{grid-template-columns:1fr 1fr}.footer-main>p{font-size:12px}.footer-bottom{flex-direction:column}}
+
+/* Bloomdyss visual refresh: stronger purple identity and clear navigation CTA */
+.nav .nav-order,
+.nav .nav-order:link,
+.nav .nav-order:visited {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  min-height:44px; min-width:132px; padding:12px 18px;
+  background:#32106b !important; color:#fff !important;
+  -webkit-text-fill-color:#fff; font-size:13px !important; font-weight:700;
+  line-height:1.35; visibility:visible; opacity:1; text-indent:0;
+  border:1px solid #6d38a3; box-shadow:4px 4px 0 #efb8d8;
+}
+.nav .nav-order span { display:inline-block; color:#f7d8e9 !important; margin-left:2px; }
+.nav .nav-order:hover,.nav .nav-order:focus-visible {
+  background:#6d38a3 !important; color:#fff !important;
+  -webkit-text-fill-color:#fff; box-shadow:6px 6px 0 #efb8d8;
+}
+.brand { display:flex; align-items:center; justify-content:center; overflow:visible; }
+.brand img { object-fit:contain; }
+.footer-logo { background:transparent; }
+.footer-logo img { filter:brightness(0) invert(1); object-fit:contain; padding:8px; }
+@media(max-width:760px) {
+  .nav .nav-order { width:100%; min-height:46px; }
+}
+
+/* Logo de navegación ampliado para destacar la identidad Bloomdyss */
+.header .brand { width:220px; height:82px; flex-shrink:0; }
+.header .brand img { width:100%; height:100%; object-fit:contain; }
+@media(max-width:1000px) { .header .brand { width:190px; height:74px; } }
+@media(max-width:760px) { .header .brand { width:170px; height:66px; } .header { height:78px; } .nav { top:77px; } }
+@media(max-width:390px) { .header .brand { width:145px; height:60px; } }
+
+/* Logo del menú más grande: PNG recortado sin espacio vacío */
+.header { height:104px; }
+.header .brand { width:auto; height:84px; }
+.header .brand img { width:auto; height:100%; max-width:none; }
+@media(max-width:1000px) { .header .brand { height:76px; } }
+@media(max-width:760px) { .header { height:88px; } .header .brand { width:auto; height:68px; } .nav { top:87px; } }
+@media(max-width:390px) { .header .brand { height:58px; } }

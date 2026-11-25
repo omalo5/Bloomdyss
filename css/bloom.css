@@ -1,0 +1,103 @@
+/* ===== Bloomdyss · más morado, flores decorativas y fotos completas ===== */
+:root{--paper:#f5eefa;--lilac:#ece0f6;--lilac2:#e0cdf0;--violet-soft:#b88ad6}
+
+/* — Más morado en toda la web — */
+body{background:var(--paper)}
+.header{background:linear-gradient(180deg,#f8f1fc,#efe3f8);border-bottom:1px solid #d9c5ea}
+.topbar{background:linear-gradient(90deg,#1d0540,#32106b 50%,#1d0540)}
+.catalog-area,.featured{background:var(--lilac)}
+.x-alt{background:#e6d6f3}
+
+.catalog-card{background:#fdfaff;border-color:#d9c5ea}
+.catalog-card:hover{box-shadow:0 18px 40px #32106b26}
+.catalog-note{background:#dcc8ee;color:#4d2d6b}
+.filter{border-color:#bda0d6;color:#4d1c8c;background:#f8f1fc}
+.step-card,.quote-card{background:#fbf6ff;border-color:#d9c5ea}
+.faq-item{border-color:#cdb4e2}
+.intro-strip{background:linear-gradient(90deg,#e9d3f5,#f3d3e8)}
+.catalog-heading>div>small,.x-head small{color:#7b3fae}
+.catalog-heading h2 em,.x-head h2 em{color:#8a3fb0}
+.order-banner{background:linear-gradient(110deg,#d9b9ee,#f0c3e0)}
+
+/* — Fotos completas (sin recortar): se ven enteras sobre un fondo difuminado del mismo color — */
+.catalog-img{height:auto;aspect-ratio:3/4;background:#32106b;isolation:isolate}
+.catalog-img .blur-bg,.carousel-slide .blur-bg{position:absolute;inset:-24px;width:calc(100% + 48px);height:calc(100% + 48px);max-width:none;object-fit:cover;filter:blur(18px) saturate(1.1);opacity:.9;z-index:-1}
+.catalog-img img:not(.blur-bg){position:relative;object-fit:contain;object-position:center}
+.catalog-img>span{z-index:3}
+.carousel-slide>img:not(.blur-bg){object-fit:contain;object-position:center}.carousel-slide>img.blur-bg{z-index:0;animation:none!important;transform:none}
+.carousel-shade{z-index:1}.carousel-caption{z-index:2}
+@media(max-width:500px){.catalog-img{height:auto}}
+
+/* — Diseños de flores — */
+.catalog-area,.featured,.x-alt,.steps,.x-sec{position:relative}
+.catalog-area:before,.featured:before{content:"";position:absolute;inset:0;background:url(../assets/deco/patron.svg) 0 0/170px;opacity:.22;pointer-events:none}
+.catalog-area>*,.featured>*{position:relative;z-index:1}
+.catalog-heading:after{content:"";position:absolute;left:0;right:0;bottom:-58px;height:44px;background:url(../assets/deco/divisor.svg) center/auto 44px no-repeat;opacity:.9;pointer-events:none}
+.catalog-heading{position:relative;margin-bottom:84px}
+/* rosa grande y rama en las esquinas de las secciones */
+.catalog-area:after,.featured:after{content:"";position:absolute;right:-70px;top:-60px;width:300px;height:300px;background:url(../assets/deco/rosa.svg) center/contain no-repeat;opacity:.55;pointer-events:none;animation:bloomSpin 70s linear infinite}
+@keyframes bloomSpin{to{transform:rotate(360deg)}}
+.x-alt:before,.x-sec.x-alt:before{content:"";position:absolute;left:-30px;bottom:-20px;width:190px;height:260px;background:url(../assets/deco/rama.svg) center/contain no-repeat;opacity:.5;pointer-events:none}
+.x-alt>*{position:relative;z-index:1}
+/* flores en el encabezado morado */
+.page-hero,.home-hero,.catalog-hero{position:relative}
+.catalog-hero:before,.home-hero:before,.page-hero:before{content:"";position:absolute;z-index:0;position:absolute;left:-60px;bottom:-70px;width:280px;height:280px;background:url(../assets/deco/rosa.svg) center/contain no-repeat;opacity:.22;filter:brightness(1.4);pointer-events:none}
+.catalog-hero:after,.page-hero:after{content:"";position:absolute;z-index:0;position:absolute;right:2%;top:-20px;width:150px;height:210px;background:url(../assets/deco/rama.svg) center/contain no-repeat;opacity:.3;pointer-events:none;transform:scaleX(-1)}
+.catalog-hero>*,.page-hero>*{position:relative;z-index:2}
+.catalog-doodle{display:none}
+/* flor pequeña en cada tarjeta */
+.catalog-info>div{position:relative}
+.catalog-card:not(.custom-card)::after{content:"";position:absolute;right:12px;top:12px;width:44px;height:44px;background:url(../assets/deco/flor5.svg) center/contain no-repeat;z-index:4;pointer-events:none;filter:drop-shadow(0 2px 4px #32106b55)}
+.catalog-card{position:relative}
+.custom-card:after{content:"";position:absolute;right:-50px;bottom:-60px;width:260px;height:260px;background:url(../assets/deco/rosa.svg) center/contain no-repeat;opacity:.35;font-size:0}
+.custom-card{background:linear-gradient(150deg,#32106b,#5a2796)}
+.footer:before{content:"";display:block;height:44px;margin:-44px -8% 30px;background:url(../assets/deco/divisor.svg) center/auto 44px repeat-x;opacity:.9}
+.footer{position:relative}
+@media(prefers-reduced-motion:reduce){.catalog-area:after,.featured:after{animation:none}}
+@media(max-width:700px){.catalog-area:after,.featured:after{width:200px;height:200px;right:-60px}.catalog-hero:after,.page-hero:after{width:90px;height:130px}}
+html,body{overflow-x:clip}
+.catalog-area,.featured,.x-alt,.footer{overflow:hidden}
+
+/* Inicio: las tarjetas muestran la foto entera (3 columnas, formato vertical) */
+.feature-grid{grid-template-columns:repeat(3,1fr);grid-template-rows:auto}
+.feature-tall{grid-row:auto;grid-column:auto}
+.feature-card{aspect-ratio:3/4}
+.feature-card img{object-position:center}
+@media(max-width:700px){.feature-grid{grid-template-columns:1fr;grid-template-rows:auto}.feature-tall{grid-column:auto}.feature-card{aspect-ratio:3/4}}
+/* Foto lateral de inicio y de personaliza, enteras con fondo difuminado */
+.custom-img,.personalize-photo{overflow:hidden;isolation:isolate}
+.custom-img>img.blur-bg,.personalize-photo>img.blur-bg{position:absolute;inset:-24px;width:calc(100% + 48px);height:calc(100% + 48px);max-width:none;object-fit:cover;filter:blur(20px);z-index:-1}
+.custom-img>img:not(.blur-bg),.personalize-photo>img:not(.blur-bg){object-fit:contain;position:absolute;inset:0;width:100%;height:100%}
+.personalize-photo{position:relative}
+.personalize-photo{overflow:visible}
+.personalize-photo>img.blur-bg{clip-path:inset(24px)}
+.personalize-layout,.order-layout{background:var(--lilac)}
+.order-form{background:#fdfaff;border-color:#d9c5ea}
+
+
+/* Accesibilidad: contraste mejorado en el banner de pedido de la página de inicio */
+.order-banner {
+  background: linear-gradient(110deg, #f0c8e8 0%, #e7c5f0 52%, #f7cfe5 100%) !important;
+  color: #32106b !important;
+}
+.order-banner small {
+  color: #51206f !important;
+  font-weight: 700;
+  text-shadow: none;
+}
+.order-banner h2 {
+  color: #32106b !important;
+}
+.order-banner h2 em {
+  color: #873678 !important;
+}
+.order-banner .button-light {
+  background: #32106b !important;
+  color: #ffffff !important;
+  border: 1px solid #32106b;
+  box-shadow: 5px 5px 0 #ffffff80;
+}
+.order-banner .button-light:hover {
+  background: #4d1c8c !important;
+  color: #ffffff !important;
+}

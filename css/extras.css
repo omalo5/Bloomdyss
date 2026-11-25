@@ -1,0 +1,58 @@
+
+/* ===== Extras: legibilidad, animaciones, WhatsApp, FAQ, secciones nuevas ===== */
+.nav>a{font-size:12.5px}.nav .nav-order{font-size:12px!important}
+.section p,.page-hero>p,.about-copy p,.home-hero p{font-size:max(1em,15px)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+.catalog-card,.feature-card,.step-card,.faq-item,.quote-card{transition:transform .3s ease,box-shadow .3s ease}
+.catalog-card:hover,.feature-card:hover,.step-card:hover,.quote-card:hover{transform:translateY(-6px);box-shadow:0 22px 45px #32106b1f}
+.catalog-card img,.feature-card img{transition:transform .6s ease}
+.catalog-card:hover img,.feature-card:hover img{transform:scale(1.05)}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:90;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;border-radius:40px;padding:13px 18px 13px 14px;font-size:14px;font-weight:700;box-shadow:0 10px 28px #0003;transition:transform .2s}
+.wa-float:hover{transform:translateY(-3px) scale(1.03)}.wa-float svg{width:26px;height:26px;fill:#fff;flex-shrink:0}
+@media(max-width:600px){.wa-float{padding:14px;right:14px;bottom:14px}.wa-float span{display:none}}
+.wa-toast{position:fixed;right:20px;bottom:86px;z-index:91;max-width:300px;background:#32106b;color:#fff;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 12px 30px #0004}
+.x-sec{padding:80px 8%}.x-head{text-align:center;max-width:620px;margin:0 auto 42px}
+.x-head small{font-size:12px;font-weight:700;letter-spacing:.17em;color:#a25b9b}
+.x-head h2{font:500 clamp(32px,4vw,46px)/1.2 var(--serif);color:var(--purple);margin:10px 0}.x-head h2 em{color:#a24d90}
+.x-head p{color:var(--muted);font-size:15px;margin:0}
+.steps-grid,.quotes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.step-card,.quote-card{background:#fffdfa;border:1px solid var(--line);padding:30px 26px}
+.step-card b{font:italic 34px var(--serif);color:#b274ad}.step-card h3{font:500 22px var(--serif);color:var(--purple);margin:6px 0}
+.step-card p,.quote-card p{font-size:15px;color:var(--muted);margin:0;line-height:1.8}
+.quote-card p{font:italic 500 19px/1.6 var(--serif);color:var(--purple)}.quote-card cite{display:block;margin-top:14px;font-size:13px;font-style:normal;color:#8b6b91}
+.x-alt{background:#f4ebf5}
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{border-bottom:1px solid #e1d3e4;background:transparent}.faq-item:first-child{border-top:1px solid #e1d3e4}
+.faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:20px 4px;font:500 19px var(--serif);color:var(--purple)}
+.faq-item summary::-webkit-details-marker{display:none}.faq-item summary:after{content:"+";font-size:24px;color:#b274ad;transition:transform .25s}
+.faq-item[open] summary:after{transform:rotate(45deg)}.faq-item p{margin:0 4px 22px;font-size:15px;line-height:1.8;color:var(--muted)}
+.ig-strip{text-align:center}.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:0 0 28px}
+.ig-grid img{width:100%;aspect-ratio:1;object-fit:cover}
+@media(max-width:850px){.steps-grid,.quotes-grid{grid-template-columns:1fr}.ig-grid{grid-template-columns:repeat(3,1fr)}.x-sec{padding:60px 6%}}
+.wa-submit{width:100%;margin-top:12px;background:#25d366;color:#fff;border:0;justify-content:center}
+.wa-submit:hover{background:#1ebd5a}.form-or{text-align:center;font-size:12px;color:#94889b;margin:12px 0 0}
+
+/* ===== Arma tu regalo en el menú: menú hamburguesa desde 1100px ===== */
+@media(max-width:1100px){.nav-toggle{display:block;margin-left:auto}.nav{display:none;position:absolute;top:103px;left:0;right:0;background:#fffaf6;padding:20px 6% 25px;box-shadow:0 15px 25px #21074618;flex-direction:column;align-items:stretch;gap:17px}.nav.open{display:flex}.nav>a{font-size:14px}.nav .nav-order{width:100%;min-height:46px}}
+@media(max-width:760px){.nav{top:87px}}
+/* ===== Decoración floral con las rosas del logo ===== */
+.catalog-bottom-cta:before,.catalog-bottom-cta:after,.order-hero:after{content:""!important;font-size:0;width:300px;height:240px;background:url(../assets/rosa-decor.png) center/contain no-repeat;top:10%}
+.catalog-bottom-cta:after{transform:scaleX(-1)}.order-hero:after{right:4%;top:-20px}
+.about-doodle{font-size:0!important;width:340px;height:270px;background:url(../assets/rosa-decor.png) center/contain no-repeat;right:-30px;bottom:-50px}
+.wave{position:absolute;left:0;right:0;top:0;height:46px;transform:translateY(-99%);line-height:0;pointer-events:none}.wave svg{width:100%;height:100%;display:block}
+.x-alt,.x-season{position:relative}
+.x-season{background:#32106b;color:#fff;text-align:center;overflow:hidden;padding:84px 8%}
+.x-season:before,.x-season:after{content:"";position:absolute;top:8%;width:300px;height:240px;background:url(../assets/rosa-decor.png) center/contain no-repeat}.x-season:before{left:2%}.x-season:after{right:2%;transform:scaleX(-1)}
+.x-season>*{position:relative;z-index:1}.x-season small{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--pink)}
+.x-season h2{font:500 clamp(32px,4.4vw,52px)/1.15 var(--serif);margin:12px auto;max-width:720px}.x-season p{max-width:560px;margin:0 auto 26px;color:#dfd2e8;font-size:16px;line-height:1.8}
+.season-bar{display:flex;align-items:center;justify-content:center;gap:14px;background:var(--pink);color:#32106b;font-size:13px;font-weight:700;padding:9px 40px 9px 16px;position:relative;text-align:center}
+.season-bar a{text-decoration:underline}.season-bar button{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;color:#32106b;font-size:18px;cursor:pointer}
+/* ===== Barra fija de pedido en celular ===== */
+.mbar{display:none}
+@media(max-width:760px){.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:95;background:#fffaf6;border-top:1px solid #eadfeb;box-shadow:0 -6px 20px #32106b14;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));gap:10px}
+.mbar a{flex:1;text-align:center;padding:13px 8px;font-size:14px;font-weight:700}.mbar .m-order{background:var(--purple);color:#fff;box-shadow:3px 3px 0 var(--pink)}.mbar .m-wa{background:#25d366;color:#fff}
+body.has-mbar{padding-bottom:72px}.wa-float{display:none!important}}
+
+.catalog-img img,.feature-card img,.carousel-slide img{object-position:center 30%}
